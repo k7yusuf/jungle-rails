@@ -1,0 +1,9 @@
+<div class="line-item">
+  <%= image_tag line_item.product.image.thumb.url, alt: line_item.product.name, class: "line-item-image" %>
+  <div class="line-item-details">
+    <h4><%= line_item.product.name %></h4>
+    <p><%= line_item.product.description %></p>
+    <p>Quantity: <%= line_item.quantity %></p>
+    <p>Line Item Total: <%= number_to_currency(line_item.total_cents / 100.0) %></p>
+  </div>
+</div>
